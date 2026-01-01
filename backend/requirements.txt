@@ -2,8 +2,10 @@ fastapi
 uvicorn
 tensorflow
 pillow
-numpy
-google-generative-ai
+numpy<1.26
 scikit-learn
-streamlit
+google-generativeai
 python-dotenv
+firebase-admin
+openai
+pyrebase4
