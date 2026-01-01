@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+tensorflow
+pillow
+numpy
+google-generative-ai
+scikit-learn
+streamlit
+python-dotenv
