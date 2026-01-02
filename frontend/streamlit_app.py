@@ -10,9 +10,24 @@ import firebase_client  # new import
 # ======================
 BACKEND_URL = "http://127.0.0.1:8000/predict"
 
+
+logo = Image.open("assets/logo.png")
+
+col1, col2 = st.columns([1, 4])
+
+with col1:
+    st.image(logo, width=120)
+
+with col2:
+    st.markdown(
+        """
+        <h1 style='margin-bottom:0;'>SkinGuard AI</h1>
+        <p style='font-size:18px;color:gray;'>by Team Orion</p>
+        """,
+        unsafe_allow_html=True
+    )
 st.set_page_config(page_title="SkinGuard AI", layout="centered")
 
-st.title("🩺 SkinGuard AI")
 st.write("AI-powered skin lesion analysis with nearby dermatologist support")
 
 # Persistent state for results so UI doesn't lose data on rerun
@@ -50,7 +65,7 @@ if not st.session_state.authenticated:
 # ======================
 # Image Input Section
 # ======================
-st.subheader("📸 Choose Image Source")
+st.subheader("Choose Image Source")
 
 image_source = st.radio(
     "Select image input method:",
@@ -86,7 +101,7 @@ if image:
 # ======================
 result = None
 
-if image and st.button("🔍 Analyze Image"):
+if image and st.button("Analyze Image"):
     with st.spinner("Analyzing image with AI..."):
         try:
             files = {
@@ -140,7 +155,7 @@ if st.session_state.result:
         value=f'{result["confidence"]}%'
     )
 
-    st.subheader("🧠 AI Explanation")
+    st.subheader("AI Explanation")
     st.write(result["ai_explanation"])
 
     st.warning(
@@ -181,10 +196,10 @@ if st.session_state.result:
         value=st.session_state.city
     )
 
-    if st.button("🔍 Search Dermatologists"):
+    if st.button("Search Dermatologists"):
         st.session_state.city = city
 
     if st.session_state.city:
         maps_url = f"https://www.google.com/maps/search/dermatologist+near+{st.session_state.city.replace(' ', '+')}"
-        st.markdown(f"🗺 **[View Nearby Dermatologists on Map]({maps_url})**")
+        st.markdown(f"**[View Nearby Dermatologists on Map]({maps_url})**")
         st.info("🔗 Click the link above to open Google Maps in a new tab.")

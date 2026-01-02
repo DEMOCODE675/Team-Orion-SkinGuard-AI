@@ -1,8 +1,9 @@
 fastapi
 uvicorn
+gunicorn
 tensorflow
 pillow
-numpy<1.26
+numpy
 scikit-learn
 google-generativeai
 python-dotenv
