@@ -62,7 +62,8 @@ ENV/
 # =========================
 *.h5
 *.pkl
-*.model
+*.skinguard_version_3.h5
+*.skinguard.keras
 
 # =========================
 # Images (allow folder, exclude large files)
