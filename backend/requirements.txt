@@ -10,3 +10,12 @@ python-dotenv
 firebase-admin
 openai
 pyrebase4
+streamlit
+requests
+flask
+flask-cors
+pydantic
+aiofiles
+python-multipart
+loguru
+itsdangerous
