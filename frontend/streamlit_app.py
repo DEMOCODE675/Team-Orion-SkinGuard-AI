@@ -8,7 +8,7 @@ import firebase_client  # new import
 # ======================
 # Config
 # ======================
-BACKEND_URL = "http://127.0.0.1:8000/predict"
+BACKEND_URL = "https://team-orion-skinguard-ai.onrender.com"
 
 
 logo = Image.open("assets/logo.png")
