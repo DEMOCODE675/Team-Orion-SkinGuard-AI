@@ -8,7 +8,7 @@ import firebase_client  # new import
 # ======================
 # Config
 # ======================
-BACKEND_URL = "https://team-orion-skinguard-ai.onrender.com/analyze"
+BACKEND_URL = "http://127.0.0.1:8000/predict"
 
 
 logo = Image.open("assets/logo.png")
@@ -46,7 +46,6 @@ if "user" not in st.session_state:
 
 with st.sidebar:
     if not st.session_state.authenticated:
-     if not st.session_state.authenticated:
         mode = st.radio("", ["Login", "Sign Up"])
         if mode == "Login":
             auth.login_ui()

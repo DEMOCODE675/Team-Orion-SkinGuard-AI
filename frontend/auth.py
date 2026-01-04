@@ -130,3 +130,10 @@ def signup_ui():
             st.rerun()
         except Exception:
             st.error("Signup failed. The email may already be in use.")
+
+def logout_user():
+    st.session_state.authenticated = False
+    st.session_state.user = None
+    st.session_state.idToken = None
+    st.session_state.localId = None
+    firebase_client.clear_session()
