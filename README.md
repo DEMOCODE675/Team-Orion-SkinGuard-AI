@@ -174,6 +174,12 @@ Example response:
 }
 ```
 
+## Our trained model
+
+SkinGuard AI uses a model trained and fine-tuned by Team Orion for this project. We built the training pipeline around an ImageNet-pretrained EfficientNetB3 backbone, then added a binary classification head for the `benign` and `malignant` classes. The training workflow includes image augmentation, class-weight handling for imbalance, early stopping, checkpointing, learning-rate reduction, and fine-tuning of the top backbone layers.
+
+This means the model is our project-specific trained artifact, saved as `backend/model/skinguard.keras` and loaded by the FastAPI inference service. It was developed for research and demonstration purposes and has not been clinically validated or approved for diagnosis.
+
 ## Model and dataset
 
 The included inference configuration uses a 224×224 input and the classes `benign` and `malignant`. `train_model.py` documents an EfficientNetB3 training workflow with augmentation, class weighting, early stopping, checkpointing, and fine-tuning.
