@@ -2,7 +2,7 @@
 
 > **AI-assisted skin lesion screening for educational use — not a medical diagnosis.**
 
-SkinGuard AI is a web application built by **Team Orion** that uses a TensorFlow image-classification model to provide an initial benign/malignant prediction for an uploaded or camera-captured skin image. The app combines a Streamlit interface, a FastAPI inference service, Firebase authentication and storage, and optional AI-generated explanations.
+SkinGuard AI is a web application that uses a TensorFlow image-classification model to provide an initial benign/malignant prediction for an uploaded or camera-captured skin image. The app combines a Streamlit interface, a FastAPI inference service, Firebase authentication and storage, and optional AI-generated explanations.
 
 ## What it does
 
